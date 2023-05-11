@@ -108,7 +108,7 @@ a:hover {
 .title {
     font-size: 150px;
     line-height: 145px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 #controller {
@@ -159,6 +159,7 @@ select {
     font-size: 20px;
     background-color: #ccc;
     padding: 2px;
+    border: black 2px solid;
 }
 
 #labor {

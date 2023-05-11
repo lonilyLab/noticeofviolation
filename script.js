@@ -21,7 +21,7 @@ fetch(url)
       console.log(json);
       json.forEach(function(labor) {
         laborDOM += `
-        <div class="laboritem">
+        <div class="labor-item">
         <li><b>Language:</b> ${labor.language} <b>Intake date:</b> ${formatDate(labor.intake_date)} <b>Request type:</b> ${labor.request_type} <b>Topic:</b> ${labor.topic} <b>Outcome:</b>${labor.outcome}</li></div>`;
       });
       laborContainer.innerHTML = laborDOM;
