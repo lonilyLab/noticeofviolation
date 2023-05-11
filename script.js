@@ -10,7 +10,6 @@ const formatDate = (dateTime) => {
   const dateObject = new Date(dateTime);
   return dateObject.toLocaleString("en-US", {
     dateStyle: "medium",
-    timeStyle: "short"
 });
 };
 
@@ -21,7 +20,26 @@ fetch(url)
   .then((json) => {
       console.log(json);
       json.forEach(function(labor) {
-        laborDOM += `<li>${labor.language} ${formatDate(labor.intake_date)} ${labor.request_type} ${labor.topic} ${labor.outcome}</li>`;
+        laborDOM += `
+        <div class="laboritem">
+        <li><b>Language:</b> ${labor.language} <b>Intake date:</b> ${formatDate(labor.intake_date)} <b>Request type:</b> ${labor.request_type} <b>Topic:</b> ${labor.topic} <b>Outcome:</b>${labor.outcome}</li></div>`;
       });
       laborContainer.innerHTML = laborDOM;
   });
+  
+var acc = document.getElementsByClassName("accordion");
+var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+
+      this.classList.toggle("active");
+  
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }

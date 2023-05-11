@@ -15,12 +15,54 @@
     <div class="main">
       <div class="left">
         <div class="intro">
-          <img src="" >
-          <h1 class="title">Notice<br> of<br> Violation</h1>
+          <img class="logo" src="assets/Seal_of_the_United_States_Department_of_Labor.svg" width="300" height="300">
+          <h1 class="title">Notice of<br> Violation</h1>
         </div>
         <div id="controller">
-          <div class="buttons">
+            <h2 class="search">"Try" to search by...</h2>
+          <div class="selector-container">
+            <div class="selector">
+            <label for="topic">Topic:</label>
+            <select name="topic">
+              <option value="Other">Other</option>
+              <option value="Commuter Benefits">Commuter Benefits</option>
+              <option value="Discrimination/Harrassment">Discrimination/Harrassment</option>
+              <option value="Fair Scheduling: Fast Food">Fair Scheduling: Fast Food</option>
+              <option value="Fair Scheduling: Retail">Fair Scheduling: Retail</option>
+              <option value="Fair Workweek">Fair Workweek</option>
+              <option value="Freelance Isn't Free">Freelance Isn't Free</option>
+              <option value="Grocery Worker Retention">Grocery Worker Retention</option>
+              <option value="Health & Safety">Health & Safety</option>
+              <option value="Living Wage">Living Wage</option>
+              <option value="Paid Safe and Sick Leave">Paid Safe and Sick Leave</option>
+              <option value="Prevailing Wage">Prevailing Wage</option>
+              <option value="Temporary Leave">Temporary Leave</option>
+              <option value="Unemployment Insurance">Unemployment Insurance</option>
+              <option value="Wage & Hour">Wage & Hour</option>
+              <option value="Worker's Compensation">Worker's Compensation</option>
+            </select>
           </div>
+          <div class="selector">
+            <label for="requesttype">Request Type:</label>
+            <select name="requesttype">
+              <option value="Information Request">Information Request</option>
+              <option value="Outreach Request">Outreach Request</option>
+            </select>
+          </div>
+          <div class="selector">
+            <label for="outcome">Outcome:</label>
+            <select name="outcome">
+              <option value="Information Provided">Information Provided</option>
+              <option value="Multiple Outcomes (2)">Multiple Outcomes (2)</option>
+              <option value="Assigned for Referral Review">Assigned for Referral Review</option>
+              <option value="Assigned for Review">Assigned for Review</option>
+              <option value="Assigned for Outreach Review">Assigned for Outreach Review</option>
+              <option value="Referral Provided">Referral Provided</option>
+              <option value="Multiple Outcomes">Multiple Outcomes</option>
+            </select>
+          </div>
+          </div>
+          <button class="submit" type="submit" value="Submit">Submit</button>
         </div>
         <div id="labor">
         </div>
@@ -32,33 +74,18 @@
         </div>
         <div id="key">
           <h1>Key</h1>
-          <h2>Data Glossary</h2>
-          <ul id="datadictionary">
-            <li>Language</li>
-            <li>Intake Date</li>
-            <li>Request Type</li>
-            <li>Topic</li>
-            <li>Outcome</li>
-          </ul>
-          <h2>Frequency of Topics</h2>
-          <ul id="topics">
-            <li>Other</li>
-            <li>Commuter Benefits</li>
-            <li>Discrimination/Harrassment</li>
-            <li>Fair Scheduling: Fast Food</li>
-            <li>Fair Scheduling: Retail</li>
-            <li>Fair Workweek</li>
-            <li>Freelance Isn't Free</li>
-            <li>Grocery Worker Retention</li>
-            <li>Health & Safety</li>
-            <li>Living Wage</li>
-            <li>Paid Safe and Sick Leave</li>
-            <li>Prevailing Wage</li>
-            <li>Temporary Leave</li>
-            <li>Unemployment Insurance</li>
-            <li>Wage & Hour</li>
-            <li>Worker's Compensation</li>
-          </ul>
+          <div class="">
+          <button class="accordion">LANGUAGE</button>
+          <div class="panel"><p>"Preferred language of the customer."</p></div>
+          <button class="accordion">INTAKE DATE</button>
+          <div class="panel"><p>"Date inquiry was entered into the system."</p></div>
+          <button class="accordion">REQUEST TYPE</button>
+          <div class="panel"><p>"Type of the inquiry received."</p></div>
+          <button class="accordion">TOPIC</button>
+          <div class="panel"><p>"Law or rule that is the subject of the inquiry."</p></div>
+          <button class="accordion">OUTCOME</button>
+          <div class="panel"><p>"Result of the inquiry."</p></div>
+          </div>
         </div>
         <div id="resources">
           <h1>Resources</h1>
@@ -67,7 +94,7 @@
             <li><a class="resourceslinks" href="https://www.nyc.gov/assets/dca/downloads/pdf/workers/Important-Information-for-Workers-Flyer-English.pdf">Know Your Rights</a></li>
             <li><a class="resourceslinks" href="https://www.nyc.gov/assets/dca/downloads/pdf/workers/StateofWorkersRights-Report-2022.pdf">2022 Annual Report: The State of Worker's Rights in New York City</a></li>
             <li><a class="resourceslinks" href="https://www.dol.gov/general/workcenter/unions-101">Unions 101</a></li>
-            <li>Labor law posters</li>
+            <li><a class="resourceslinks" href="https://www.dol.gov/sites/dolgov/files/WHD/legacy/files/AWARE.pdf">AWARE (Alternatives for Worker Action, Rights, and Education Booklet)</a></li>
           </ul>
         </div>
       </div>

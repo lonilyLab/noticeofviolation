@@ -13,6 +13,7 @@ h1 {
     font-weight: 100;
     font-size: 70px;
     line-height: 70px;
+    margin-bottom: 10px;
 }
 
 p {
@@ -35,11 +36,13 @@ a.marqueelink:hover {
 }
 
 a.resourceslinks {
+    font-weight: 400;
     text-decoration: none;
     color: blue;
 }
 
 a.resourceslinks:hover {
+    color: blue;
     text-decoration: underline solid 1px blue;
 }
 
@@ -51,6 +54,7 @@ a.resourceslinks:hover {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* border: solid 1px red; */
 }
 
 .main{
@@ -73,6 +77,7 @@ a.resourceslinks:hover {
     border-right: 2px dashed black;
     margin: 10px;
     padding: 10px;
+    align-items: center;
     /* padding-right: 10px; */
 }
 
@@ -81,32 +86,85 @@ a.resourceslinks:hover {
     margin: 10px;
 }
 
+.logo {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    transform: rotate(40deg);
+    transition: transform 1s ease-in-out;
+}
+
+.logo:hover {
+    transform: rotate(0deg);
+}
+
 .title {
     font-size: 150px;
     line-height: 145px;
+    margin-bottom: 20px;
 }
 
 #controller {
-    
+    margin-bottom: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 10px;
+    border-top: black 3px solid 100%;
+
+}
+
+.selector-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-top: black 3px solid;
+}j
+
+.selector {
+    display: inline-block;
+}
+
+label {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+select {
+    font-family:"ArialNarrow";
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.submit {
+    font-family:"ArialNarrow";
+    font-weight: 600;
+    font-size: 20px;
 }
 
 #labor {
     display: flex;
     flex-flow: column nowrap;
     list-style: square;
+    /* align-items: center; */
+    text-align: left;
 }
-
 
 .right {
     width: 20vw;
-    /* background-color: lightgray; */
     overflow-y: scroll;
     overflow-x: hidden;
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
     margin: 10px;
-    padding: 10px;
 }
 
 #about {
@@ -121,15 +179,51 @@ a.resourceslinks:hover {
     padding-bottom: 10px;
 }
 
-#datadictionary {
-    text-align: left;
-    list-style: none;
+.button {
+    border-bottom: black 3px solid 100%;
 }
 
-#topics {
+.accordion {
+    font-family:"ArialNarrow";
+    background-color: white;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    padding: 10px;
+    width: 100%;
     text-align: left;
-    list-style: none;
-}
+    border: 1px solid black;
+    outline: none;
+  }
+  
+  .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: blue;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    color: blue;
+  }
+
+
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    color: blue;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 10px;
+    display: none;
+    overflow: hidden;
+    text-align: left;
+    border: 1px solid black;
+  }
 
 #links {
     text-align: left;
@@ -137,6 +231,7 @@ a.resourceslinks:hover {
     margin-left: 20px;
     margin-bottom: 10px;
     padding-bottom: 10px;
+    list-style-type: square;
 }
 
 .marquee {
