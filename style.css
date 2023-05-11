@@ -1,11 +1,16 @@
 @font-face {
     font-family: "PPEditorialNew-Regular";
-    src: url(/assets/PPEditorialNew-Regular.otf);
+    src: url('assets/PPEditorialNew-Regular.otf');
 }
 
 @font-face {
     font-family: "ArialNarrow";
-    src: url(/assets/ArialNarrow.ttf);
+    src: url('assets/ArialNarrow.ttf');
+}
+
+@font-face {
+    font-family: "ArialNarrowBold";
+    src: url('assets/ArialNarrowBold.ttf');
 }
 
 *, ::after, ::before {
@@ -21,6 +26,10 @@ h1 {
     font-size: 70px;
     line-height: 70px;
     margin-bottom: 10px;
+}
+
+h2 {
+    font-family:"ArialNarrowBold";
 }
 
 p {
@@ -140,6 +149,7 @@ a:hover {
 }
 
 label {
+    font-family:"ArialNarrowBold";
     font-weight: 600;
     font-size: 20px;
     margin: 5px;
@@ -154,7 +164,7 @@ select {
 }
 
 .submit {
-    font-family:"ArialNarrow";
+    font-family:"ArialNarrowBold";
     font-weight: 600;
     font-size: 20px;
     background-color: #ccc;
@@ -232,9 +242,8 @@ select {
 }
 
 .accordion {
-    font-family:"ArialNarrow";
+    font-family:"ArialNarrowBold";
     background-color: #ccc;
-    font-weight: 600;
     font-size: 20px;
     cursor: pointer;
     color: black;
@@ -308,7 +317,7 @@ select {
  .scroll-left .second {margin-left: 100%;}
     .scroll-left p {
     color: #fff;
-    font-weight: 600;
+    font-family:"ArialNarrowBold";
     position: absolute;
     width: 100%;
     height: 100%;
