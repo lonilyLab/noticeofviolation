@@ -140,7 +140,7 @@ a:hover {
     flex-flow: row nowrap;
     justify-content: space-between;
     margin-bottom: 20px;
-    border-top: black 4px solid;
+    border-top: black 5px solid;
 }
 
 .selector {
@@ -150,7 +150,6 @@ a:hover {
 
 label {
     font-family:"ArialNarrowBold";
-    font-weight: 600;
     font-size: 20px;
     margin: 5px;
 }
@@ -165,10 +164,9 @@ select {
 
 .submit {
     font-family:"ArialNarrowBold";
-    font-weight: 600;
     font-size: 20px;
     background-color: #ccc;
-    padding: 2px;
+    padding: 3px;
     border: black 2px solid;
 }
 
@@ -177,51 +175,68 @@ select {
     flex-flow: row wrap;
     list-style: square;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     /* text-align: left; */
 }
 
 .labor-item {
+    background-color: white;
     width: 20%;
     height: 200px;
     display: flex;
     overflow: auto;
     /* overflow-wrap: break-word; */
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
     margin: 5px;
     padding: 5px;
-    border-top: black 1px solid;
-    z-index: 1;
+    /* border: black 2px dashed; */
+    /* border-top: 4px solid; */
 }
 
 .labor-topic {
+    /* border-top-width: thick; */
     font-family: "ArialNarrowBold";
+    text-decoration: underline 2px black solid;
     display: flex;
     height: 25%;
-    font-size: 20px;
+    width: 50%;
+    font-size: 25px;
     text-align: center;
+    justify-content: center;
+    z-index: 1;
 }
 
 .labor-outcome {
     display: flex;
+    overflow: hidden;
     height: 40%;
-    font-size: 20px;
+    font-size: 30px;
     font-family: "ArialNarrowBold";
     font-style: italic;
     /* font-weight: 600; */
     color: red;
+    border-radius: 10px;
+    border: 3px red dashed;
     text-transform: uppercase;
-    transform: rotate(-30deg);
+    transform: rotate(-20deg);
     text-align: center;
     z-index: 2;
+}
+
+.labor-outcome:hover {
+    color: white;
+    border: none;
+    cursor: help;
+    z-index: 0;
 }
 
 .labor-info {
     display: flex;
     height: 25%;
     text-align: center;
+    z-index: 1;
 }
 
 .right {
@@ -311,9 +326,10 @@ select {
     z-index: 999;
 }
 
+
 .scroll-left a:link, .scroll-left a:visited {
     color: white;
-    text-decoration: none;
+    text-decoration: underline 1px white solid;
 }
 
 .scroll-left {
