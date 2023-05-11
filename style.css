@@ -1,29 +1,180 @@
+@font-face {
+    font-family: "PPEditorialNew-Regular";
+    src: url(/Users/emilykerenli/Documents/GitHub/lonily/noticeofviolation/assets/PPEditorialNew-Regular.otf);
+}
+
+@font-face {
+    font-family: "ArialNarrow";
+    src: url(/Users/emilykerenli/Documents/GitHub/lonily/noticeofviolation/assets/ArialNarrow.ttf);
+}
+
+h1 {
+    font-family: "PPEditorialNew-Regular";
+    font-weight: 100;
+    font-size: 70px;
+    line-height: 70px;
+}
+
+p {
+    font-family:"ArialNarrow";
+    font-weight: 100;
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    font-family:"ArialNarrow";
+}
+
+a.marqueelink, a.marqueelink:visited {
+    text-decoration: none;
+}
+
+a.marqueelink:hover {
+    text-decoration: underline solid 1px white;
+}
+
+a.resourceslinks {
+    text-decoration: none;
+    color: blue;
+}
+
+a.resourceslinks:hover {
+    text-decoration: underline solid 1px blue;
+}
+
+/* a.marquee:hover {
+    text-decoration: underline;
+} */
+
 *, ::after, ::before {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.main-container {
-overflow: hidden;
-display: flex;
+.main{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    z-index: 1;
 }
-
-.left-main {
-    width: 70%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    background-color: pink;
-}
-
-.right-sidebar {
-    width: 30%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
 
 .left::-webkit-scrollbar, .right::-webkit-scrollbar {
     display: none;
     width: 0 !important;
+}
+
+.left {
+    width: 80vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-right: 2px dashed black;
+    margin: 10px;
+    padding: 10px;
+    /* padding-right: 10px; */
+}
+
+.intro {
+    text-align: center;
+    margin: 10px;
+}
+
+.title {
+    font-size: 150px;
+    line-height: 145px;
+}
+
+#controller {
+    
+}
+
+#labor {
+    display: flex;
+    flex-flow: column nowrap;
+    list-style: square;
+}
+
+
+.right {
+    width: 20vw;
+    /* background-color: lightgray; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+#about {
+    border-bottom: 2px dashed black;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+#key {
+    border-bottom: 2px dashed black;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+#datadictionary {
+    text-align: left;
+    list-style: none;
+}
+
+#topics {
+    text-align: left;
+    list-style: none;
+}
+
+#links {
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.marquee {
+    width: 100vw;
+    display: flex;
+    z-index: 999;
+}
+
+.scroll-left a:link, .scroll-left a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.scroll-left {
+    height: 30px; 
+    overflow: hidden;
+    position: relative;
+    background-color: blue;
+}
+
+ .scroll-left .second {margin-left: 100%;}
+    .scroll-left p {
+    color: #fff;
+    font-weight: 600;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    animation: scroll-left 15s linear infinite;
+}
+    @keyframes scroll-left {
+    0% { 
+    transform: translateX(0%); 
+    }
+    100% { 
+    transform: translateX(-100%); 
+    }
 }
