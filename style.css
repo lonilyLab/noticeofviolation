@@ -104,7 +104,7 @@ a:hover {
 }
 
 .logo {
-    margin-top: 40px;
+    margin-top: 80px;
     margin-bottom: 40px;
     transform: rotate(40deg);
     transition: transform 1s ease-in-out;
@@ -167,12 +167,18 @@ select {
     font-size: 20px;
     background-color: #ccc;
     padding: 3px;
-    border: black 2px solid;
+    /* border: black 2px solid; */
     cursor: pointer;
 }
 
-.submit:hover {
+a.submit {
+    color: black;
+    text-decoration: none;
+}
+
+a.submit:hover {
     color: blue;
+    font-style: normal;
 }
 
 #labor {
@@ -256,6 +262,7 @@ select {
 
 #about {
     border-bottom: 2px dashed black;
+    margin-top: 40px;
     margin-bottom: 20px;
     padding-bottom: 20px;
 }
@@ -296,13 +303,10 @@ select {
     color: blue;
   }
 
-
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   .active, .accordion:hover {
     color: blue;
   }
   
-  /* Style the accordion panel. Note: hidden by default */
   .panel {
     padding: 0 10px;
     display: none;
@@ -325,12 +329,13 @@ select {
     margin: 5px 0; 
 }
 
-.marquee {
+#marquee {
     width: 100vw;
-    display: flex;
+    top: 0;
+    position: fixed;
+    /* display: flex; */
     z-index: 999;
 }
-
 
 .scroll-left a:link, .scroll-left a:visited {
     color: white;
@@ -340,7 +345,7 @@ select {
 .scroll-left {
     height: 30px; 
     overflow: hidden;
-    position: relative;
+    position: sticky;
     background-color: blue;
 }
 
@@ -366,25 +371,33 @@ select {
     }
 }
 
-/* @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .main {
         display: flex;
-        overflow: wrap;
+        overflow: auto;
         flex: column nowrap;
+        align-items: center;
     }
     .right {
         display: flex;
         flex: column nowrap;
+        width: 100vw;
     }
     .left {
         display: flex;
         flex: column nowrap;
+        width: 100vw;
     }
     .selector-container {
         display: flex;
         flex: column nowrap;
     }
+    #labor {
+        display: flex;
+        flex: column nowrap;
+    }
+
     .labor-item {
        width: 50%;
     }
-} */
+}

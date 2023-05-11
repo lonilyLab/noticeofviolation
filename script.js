@@ -61,7 +61,7 @@ var i;
       }
     )
   }
-  
+
 var submit = document.getElementsByClassName("submit")[0]
   submit.addEventListener("click", function () {
     laborStuff = document.getElementsByClassName("labor-item")
