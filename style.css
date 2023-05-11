@@ -1,11 +1,11 @@
 @font-face {
     font-family: "PPEditorialNew-Regular";
-    src: url(/Users/emilykerenli/Documents/GitHub/lonily/noticeofviolation/assets/PPEditorialNew-Regular.otf);
+    src: url(/assets/PPEditorialNew-Regular.otf);
 }
 
 @font-face {
     font-family: "ArialNarrow";
-    src: url(/Users/emilykerenli/Documents/GitHub/lonily/noticeofviolation/assets/ArialNarrow.ttf);
+    src: url(/assets/ArialNarrow.ttf);
 }
 
 *, ::after, ::before {
@@ -163,12 +163,46 @@ select {
 }
 
 #labor {
-    /* width: 50vw; */
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     list-style: square;
     align-items: center;
+    justify-content: center;
     /* text-align: left; */
+}
+
+.labor-item {
+    width: 20%;
+    height: 200px;
+    display: flex;
+    overflow: auto;
+    /* overflow-wrap: break-word; */
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+    border: black 1px solid;
+}
+
+.labor-topic {
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.labor-outcome {
+    display: flex;
+    font-size: 20px;
+    /* font-weight: 600; */
+    color: red;
+    text-align: center;
+}
+
+.labor-info {
+    display: flex;
+    text-align: center;
 }
 
 .right {

@@ -22,7 +22,10 @@ fetch(url)
       json.forEach(function(labor) {
         laborDOM += `
         <div class="labor-item">
-        <li><b>Language:</b> ${labor.language} <b>Intake date:</b> ${formatDate(labor.intake_date)} <b>Request type:</b> ${labor.request_type} <b>Topic:</b> ${labor.topic} <b>Outcome:</b>${labor.outcome}</li></div>`;
+        <div class="labor-topic">${labor.topic}</div>
+        <div class="labor-outcome">${labor.outcome}</div>
+        <div class="labor-info">${labor.request_type}, ${labor.language}, ${formatDate(labor.intake_date)}</div>
+        </div>`;
       });
       laborContainer.innerHTML = laborDOM;
   });
