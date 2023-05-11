@@ -24,7 +24,8 @@ fetch(url)
         <div class="labor-item">
         <div class="labor-topic">${labor.topic}</div>
         <div class="labor-outcome">${labor.outcome}</div>
-        <div class="labor-info">${labor.request_type}, ${labor.language}, ${formatDate(labor.intake_date)}</div>
+        <div class="labor-info">${labor.request_type}<br>
+        ${labor.language}, ${formatDate(labor.intake_date)}</div>
         </div>`;
       });
       laborContainer.innerHTML = laborDOM;

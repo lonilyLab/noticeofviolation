@@ -177,7 +177,7 @@ select {
     flex-flow: row wrap;
     list-style: square;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     /* text-align: left; */
 }
 
@@ -192,26 +192,35 @@ select {
     justify-content: center;
     margin: 5px;
     padding: 5px;
-    border: black 1px solid;
+    border-top: black 1px solid;
+    z-index: 1;
 }
 
 .labor-topic {
+    font-family: "ArialNarrowBold";
     display: flex;
+    height: 25%;
     font-size: 20px;
-    font-weight: 600;
     text-align: center;
 }
 
 .labor-outcome {
     display: flex;
+    height: 40%;
     font-size: 20px;
+    font-family: "ArialNarrowBold";
+    font-style: italic;
     /* font-weight: 600; */
     color: red;
+    text-transform: uppercase;
+    transform: rotate(-30deg);
     text-align: center;
+    z-index: 2;
 }
 
 .labor-info {
     display: flex;
+    height: 25%;
     text-align: center;
 }
 
