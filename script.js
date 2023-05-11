@@ -75,7 +75,7 @@ var submit = document.getElementsByClassName("submit")[0]
             var text = laborEntry.getElementsByClassName("labor-topic")[0].textContent
             display.push(text == selects[j].value)
           } else if (selects[j].name == 'requesttype'){ // Filter by request type
-            var text = laborEntry.getElementsByClassName("labor-info")[0].textContent.split('\n')[0]
+            var text = laborEntry.getElementsByClassName("labor-info")[0].textContent.split('\n')[1].trim()
             display.push(text == selects[j].value)
           } else if (selects[j].name == 'outcome'){ // Filter by outcome
             var text = laborEntry.getElementsByClassName("labor-outcome")[0].textContent

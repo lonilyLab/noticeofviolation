@@ -168,6 +168,11 @@ select {
     background-color: #ccc;
     padding: 3px;
     border: black 2px solid;
+    cursor: pointer;
+}
+
+.submit:hover {
+    color: blue;
 }
 
 #labor {
