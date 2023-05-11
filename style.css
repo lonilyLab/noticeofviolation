@@ -8,6 +8,13 @@
     src: url(/Users/emilykerenli/Documents/GitHub/lonily/noticeofviolation/assets/ArialNarrow.ttf);
 }
 
+*, ::after, ::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: solid 1px red; */
+}
+
 h1 {
     font-family: "PPEditorialNew-Regular";
     font-weight: 100;
@@ -37,27 +44,28 @@ a.marqueelink:hover {
 
 a.resourceslinks {
     font-weight: 400;
-    text-decoration: none;
+    text-decoration: underline solid 1px blue;
     color: blue;
 }
 
 a.resourceslinks:hover {
     color: blue;
-    text-decoration: underline solid 1px blue;
+    font-style: italic;
 }
 
 /* a.marquee:hover {
     text-decoration: underline;
 } */
 
-*, ::after, ::before {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    /* border: solid 1px red; */
+a {
+    color: blue;
 }
 
-.main{
+a:hover {
+    font-style: italic;
+}
+
+.main {
     height: 100vh;
     width: 100%;
     overflow: hidden;
@@ -88,7 +96,7 @@ a.resourceslinks:hover {
 
 .logo {
     margin-top: 40px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     transform: rotate(40deg);
     transition: transform 1s ease-in-out;
 }
@@ -116,8 +124,6 @@ a.resourceslinks:hover {
     font-weight: 600;
     font-size: 30px;
     margin-bottom: 10px;
-    border-top: black 3px solid 100%;
-
 }
 
 .selector-container {
@@ -125,22 +131,26 @@ a.resourceslinks:hover {
     flex-flow: row nowrap;
     justify-content: space-between;
     margin-bottom: 20px;
-    border-top: black 3px solid;
-}j
+    border-top: black 4px solid;
+}
 
 .selector {
     display: inline-block;
+    /* border: black 2px solid; */
 }
 
 label {
     font-weight: 600;
     font-size: 20px;
+    margin: 5px;
 }
 
 select {
     font-family:"ArialNarrow";
     font-weight: 100;
     font-size: 20px;
+    border-radius: 0%;
+    border: black 2px solid;
 }
 
 .submit {
@@ -150,11 +160,12 @@ select {
 }
 
 #labor {
+    /* width: 50vw; */
     display: flex;
     flex-flow: column nowrap;
     list-style: square;
-    /* align-items: center; */
-    text-align: left;
+    align-items: center;
+    /* text-align: left; */
 }
 
 .right {
@@ -190,7 +201,7 @@ select {
     font-size: 20px;
     cursor: pointer;
     color: black;
-    padding: 10px;
+    padding: 5px;
     width: 100%;
     text-align: left;
     border: 1px solid black;
@@ -227,11 +238,16 @@ select {
 
 #links {
     text-align: left;
+    font-size: 20px;
     margin-top: 10px;
     margin-left: 20px;
     margin-bottom: 10px;
     padding-bottom: 10px;
     list-style-type: square;
+}
+
+#links li {
+    margin: 5px 0; 
 }
 
 .marquee {
