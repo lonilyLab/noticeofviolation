@@ -360,3 +360,26 @@ select {
     transform: translateX(-100%); 
     }
 }
+
+/* @media screen and (max-width: 600px) {
+    .main {
+        display: flex;
+        overflow: wrap;
+        flex: column nowrap;
+    }
+    .right {
+        display: flex;
+        flex: column nowrap;
+    }
+    .left {
+        display: flex;
+        flex: column nowrap;
+    }
+    .selector-container {
+        display: flex;
+        flex: column nowrap;
+    }
+    .labor-item {
+       width: 50%;
+    }
+} */
